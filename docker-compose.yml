@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  minio:
+    image: minio/minio:latest
+    container_name: container-minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"  # MinIO Console
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
+  backend:
+    container_name: container-backend
+    build:
+      context: ./disease_detection_back
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: development
+      FLASK_APP: app.py
+    volumes:
+      - ./disease_detection_back:/app
+      - flask_sessions:/tmp/flask_session
+    env_file:
+      - ./disease_detection_back/.env
+    depends_on:
+      minio:
+        condition: service_healthy
+
+  frontend:
+    container_name: container-frontend
+    build:
+      context: ./disease_detection_front
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    volumes:
+      - ./disease_detection_front:/app
+      - /app/node_modules
+
+volumes:
+  flask_sessions:
+  minio_data:

@@ -1,0 +1,349 @@
+:root {
+    --primary-color: #3c0202;
+    --secondary-color: #f0f4f8;
+    --button-color: #981919;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-color: #efbfbf;
+}
+  
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url("../../../public/static/white_cells_2.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+  
+.history-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border-radius: 12px;
+    margin-bottom: 4px;
+}
+  
+.history-container h1,
+.history-container h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+  
+.history-container h1 {
+    font-size: 32px;
+}
+
+.history-container h3 {
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.bio-inflam-results h3 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.checkup-cluster-distances h3 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.history-container h4 {
+    margin-top: -12px;
+    font-size: 16px;
+}
+  
+.history-container h2 {
+    font-size: 24px;
+    height: 50px; 
+    padding-left: 40px;
+}
+
+.history-container h2 select {
+    margin-left: 24px;
+    width: 170px; 
+}
+  
+.history-top-button {
+    margin-bottom: 24px;
+}
+  
+.history-top-button button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    max-width: 150px;
+    white-space: nowrap;
+}
+
+  
+.history-top-button button:hover {
+    background-color: var(--hover-color);
+}
+  
+.history-container select {
+    width: 30%;
+    padding: 12px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.history-pick-patient{
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin-left: 40px;
+}
+  
+.history-container select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+  
+.history-container .history-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.history-container li {
+    margin-bottom: 5px;
+}
+  
+.history-results {
+    margin-top: 10px;
+    background-color: var(--secondary-color);
+    padding: 24px;
+    border-radius: 12px
+}
+
+.history-results table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 8px;
+}
+
+.history-results th,
+.history-results td {
+    padding: 12px;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.history-results th {
+    font-weight: bold;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 18px;
+}
+
+.history-results tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.clust_results {
+    margin-top: 20px;
+    margin-left: -10px;
+}
+
+/* Стили для нового поиска */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 14px;
+}
+
+.patient-search-container {
+  margin-bottom: 30px;
+}
+
+.search-filter-container {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.filter-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.search-results-table {
+  margin-top: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-results-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.search-results-table th {
+  background: #f0f0f0;
+  padding: 10px 15px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.search-results-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.select-patient-btn {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.select-patient-btn:hover {
+  background: #3a7bc8;
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.selected-patient-info {
+  background: #f8f9fa;
+  padding: 12px 15px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.deselect-patient-btn {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.deselect-patient-btn:hover {
+  background: #e6e6e6;
+}
+
+.history-pick-patient {
+  margin-bottom: 20px;
+}
+
+.history-pick-patient input {
+  padding: 8px 12px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.patient-search-results {
+  position: relative;
+  margin-top: 5px;
+}
+
+.patient-list {
+  position: absolute;
+  z-index: 1000;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.patient-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.patient-item:hover {
+  background-color: #f5f5f5;
+}
+
+.patient-item.selected {
+  background-color: #e0e0e0;
+}
+
+.no-results {
+  padding: 8px 12px;
+  color: #999;
+}
+
+.selected-patient {
+  margin-top: 10px;
+  padding: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selected-patient button {
+  padding: 4px 8px;
+  background: #981919;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.selected-patient button:hover {
+  background: #7a1414;
+}

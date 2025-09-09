@@ -1,0 +1,291 @@
+:root {
+    --primary-color: #3c0202;
+    --secondary-color: #f0f0f0;
+    --button-color: #981919;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-color: #540808;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url("../../../public/static/white_cells_2.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.admin-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border-radius: 12px;
+}
+
+.admin-exit-button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 10%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.admin-stats-container {
+    display: flex;
+    border-radius: 8px;
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+.admin-stat-item {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.admin-stats-container .admin-stat-item {
+    margin-bottom: 4px;
+    margin-top: 14px;
+}
+
+
+.admin-container h1,
+.admin-container h2 {
+    color: var(--primary-color);
+    font-weight: 300;
+}
+
+.admin-container h1 {
+    font-size: 24px;
+}
+
+.admin-container h2 {
+    font-size: 18px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    /* Расстояние между кнопками */
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.button-group button {
+    margin-right: 0;
+    /* Убираем лишний отступ */
+    justify-content: baseline;
+}
+
+.button-group button:hover {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+.admin-pagination button,
+.button-group button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    height: 40px;
+}
+
+.admin-pagination button:hover {
+    background-color: var(--hover-color);
+}
+
+.admin-pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.search-filter-container [type="text"] {
+    width: 280px;
+    height: 20px;
+    padding: 12px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-filter-container input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.admin-container table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    table-layout: fixed; /* Устанавливаем фиксированную ширину столбцов */
+    font-size: 14px;
+}
+
+
+.admin-container th:nth-child(1),
+.admin-container td:nth-child(1) {
+    width: 20px; /* Например, фиксированная ширина первого столбца */
+}
+
+.admin-container th:nth-child(2),
+.admin-container td:nth-child(2) {
+    width: 150px; /* Фиксированная ширина второго столбца */
+}
+
+.admin-container th:nth-child(3),
+.admin-container td:nth-child(3) {
+    width: 130px; /* Фиксированная ширина третьего столбца */
+}
+
+.admin-container th:nth-child(4),
+.admin-container td:nth-child(4) {
+    width: 125px; /* Фиксированная ширина третьего столбца */
+}
+
+.admin-container th:nth-child(5),
+.admin-container td:nth-child(5) {
+    width: 50px; /* Фиксированная ширина третьего столбца */
+}
+
+.admin-container th:nth-child(6),
+.admin-container td:nth-child(6)  {
+    width: 60px; /* Фиксированная ширина третьего столбца */
+}
+
+.admin-container th:nth-child(8),
+.admin-container td:nth-child(8) {
+    width: 120px; /* Фиксированная ширина третьего столбца */
+}
+
+.admin-container th:nth-child(9),
+.admin-container td:nth-child(9) {
+    width: 60px; /* Фиксированная ширина третьего столбца */
+}
+
+.admin-container th,
+.admin-container td {
+    padding: 12px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+}
+
+.admin-container th {
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.admin-container tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.admin-pagination {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.admin-pagination button {
+    margin: 0 8px;
+}
+
+.search-filter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.search-box input {
+    padding: 5px;
+    width: 325px;
+    height: 30px;
+}
+
+.role-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter-boxes label {
+    display: flex;
+    align-items: center; /* Выровнять текст по вертикали с чекбоксом */
+    gap: 8px; /* Можно добавить небольшой промежуток между чекбоксом и текстом */
+    font-size: 14px;
+}
+
+.filter-boxes input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.filter-container {
+    margin-bottom: 15px;
+}
+
+.filter-container h2 {
+    margin-bottom: 5px;
+}
+
+.admin-stats-container .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-stats-container th:nth-child(1),
+.admin-stats-container td:nth-child(1) {
+    width: 80px; /* Например, фиксированная ширина первого столбца */
+}
+
+.admin-stats-container th:nth-child(2),
+.admin-stats-container td:nth-child(2),
+.admin-stats-container th:nth-child(3),
+.admin-stats-container td:nth-child(3),
+.admin-stats-container th:nth-child(4),
+.admin-stats-container td:nth-child(4) {
+    width: 50px; /* Например, фиксированная ширина первого столбца */
+}
+
+.admin-stats-container .stats-table th, .stats-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.admin-stats-container .stats-table th {
+    background-color: #f4f4f4;
+}
+
+.admin-stats-container .stats-table .stats-label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.admin-stats-container .stats-table .stats-total {
+    color: var(--primary-color);
+    font-weight: bold;
+}

@@ -1,0 +1,394 @@
+:root {
+    --primary-color: #3c0202;
+    --secondary-color: #f0f4f8;
+    --button-color: #981919;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-color: #540808;
+}
+  
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url("../../../public/static/white_cells_2.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+  
+.profile-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border-radius: 12px;
+    margin-bottom: 4px;
+}
+  
+.profile-container h1,
+.profile-container h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+
+}
+  
+.profile-container h1 {
+    font-size: 32px;
+}
+
+.profile-container h4 {
+    margin-top: -12px;
+    font-size: 16px;
+}
+  
+.profile-container h2 {
+    font-size: 24px;
+    height: 50px; 
+}
+
+.profile-container p {
+    font-size: 16px;
+}
+
+.profile-container h2 select {
+    margin-left: 24px;
+    width: 170px; 
+}
+  
+.profile-top-button {
+    margin-bottom: 24px;
+}
+  
+.profile-top-button button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    max-width: 200px;
+    white-space: nowrap;
+}
+
+  
+.profile-top-button button:hover {
+    background-color: var(--hover-color);
+}
+  
+.profile-container select {
+    width: 30%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.pick-patient {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+  
+.profile-container select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+  
+.profile-container .profile-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.profile-container li {
+    margin-bottom: 40px;
+    margin-right: 30px;
+}
+  
+.profile-results {
+    margin-top: 10px;
+    background-color: var(--secondary-color);
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.profile-results table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 8px;
+    
+}
+
+.profile-results th,
+.profile-results td {
+    padding: 12px;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.profile-results th {
+    font-weight: bold;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 18px;
+}
+
+.profile-results tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+
+.profile-buttons-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.profile-buttons-row button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    max-width: 200px;
+    white-space: nowrap;
+}
+
+.profile-buttons-row button:hover {
+    background-color: var(--hover-color);
+}
+
+.profile-container input[type="text"],
+.profile-container input[type="number"],
+.profile-container select {
+    width: 40% !important;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 0 12px;
+    transition: border-color 0.3s ease;
+    background: white;
+}
+  
+.save-button {
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.save-button.disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  pointer-events: none; /* отключить все взаимодействия */
+}
+
+.save-button.active {
+  background-color: #981919;
+  cursor: pointer;
+}
+
+.save-button.active:hover {
+  background-color: #540808;
+}
+
+.profile-container .error-text {
+    color: red
+}
+
+.profile-buttons-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.save-button,
+.cancel-button,
+.profile-buttons-row > button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.save-button.disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.save-button.active {
+    background-color: #981919;
+}
+
+.save-button.active:hover {
+    background-color: #540808;
+}
+
+.cancel-button {
+    background-color: #555555;
+}
+
+.cancel-button:hover {
+    background-color: #333333;
+}
+
+/* Секция с фотографией - обновленные стили */
+.photo-section {
+    margin-bottom: 30px;
+}
+
+.photo-section h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Текущее фото и заглушка */
+.current-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* Заглушка для отсутствующего фото */
+.photo-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    border: 3px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* Кнопки фото - используем общий стиль */
+.delete-photo-btn,
+.upload-photo-btn,
+.cancel-photo-btn,
+.photo-input-label {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.delete-photo-btn:hover,
+.upload-photo-btn:hover:not(:disabled),
+.cancel-photo-btn:hover,
+.photo-input-label:hover {
+    background-color: var(--hover-color);
+}
+
+.upload-photo-btn:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Превью фото */
+.photo-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.photo-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Загрузка файла */
+.photo-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.photo-input {
+    display: none;
+}
+
+/* Ошибки */
+.photo-error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px 12px;
+    background-color: #ffe6e6;
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .profile-photo,
+    .photo-placeholder {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .photo-actions {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .upload-photo-btn,
+    .cancel-photo-btn,
+    .photo-input-label {
+        width: auto;
+        min-width: 150px;
+    }
+}

@@ -1,0 +1,297 @@
+:root {
+    --primary-color: #3c0202;
+    --secondary-color: #f0f4f8;
+    --button-color: #981919;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-color: #540808;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url('../../../public/static/white_cells_2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+.checkup-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border-radius: 12px;
+}
+
+.checkup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.checkup-header h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.checkup-user-info {
+    text-align: center;
+}
+
+.checkup-user-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.checkup-user-info button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.checkup-user-info button:hover {
+    background-color: var(--hover-color);
+}
+
+.checkup-form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkup-form-group label {
+    width: 250px;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 16px;
+    text-align: right;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.checkup-form-group input[type="text"],
+.checkup-form-group input[type="number"],
+.checkup-form-group select {
+    width: 450px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    height: 40px;
+}
+
+.checkup-form-group input:focus,
+.checkup-form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.checkup-form-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkup-form-unit {
+    width: 40px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.checkup-submit-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.checkup-submit-button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width: 27%;
+}
+
+.checkup-submit-button:hover {
+    background-color: var(--hover-color);
+}
+
+.checkup-results {
+    margin-top: 20px;
+    background-color: var(--secondary-color);
+    padding: 14px;
+    border-radius: 12px;
+}
+
+.checkup-results table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 8px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.checkup-results th,
+.checkup-results td {
+    padding: 10px;
+    text-align: left;
+    background-color: #ffffff;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+.checkup-results th {
+    font-weight: bold;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 16px;
+}
+
+.checkup-results tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.checkup-results th:nth-child(1),
+.checkup-results td:nth-child(1) {
+    width: 140px;
+}
+
+.checkup-results th:nth-child(2),
+.checkup-results td:nth-child(3) {
+    width: 170px;
+}
+
+.checkup-results th:nth-child(3),
+.checkup-results td:nth-child(3) {
+    width: 150px;
+}
+
+.checkup-health-status {
+    background-color: #ababab;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: #666666;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 24px;
+    transition: background-color 0.3s ease;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkup-health-status:hover {
+    background-color: #8c8c8c;
+}
+
+.checkup-warning {
+    color: #e74c3c;
+    font-weight: 500;
+    margin-top: 16px;
+}
+
+.checkup-expanded-results {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding-top: 1px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.checkup-expanded-results h2 {
+    color: var(--primary-color);
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.suggestions-list {
+    list-style: none;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 4px;
+    padding-left: 0;
+    background: white;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Стили для поиска пациентов */
+.patient-search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.suggestions-container {
+    position: relative;
+    width: 100%;
+}
+
+.suggestions-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 74%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f5f5f5;
+}

@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #3c0202;
+    --secondary-color: #f0f4f8;
+    --button-color: #981919;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-color: #540808;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url('../../../public/static/white_cells_2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.biochem-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border-radius: 12px;
+}
+
+.biochem-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.biochem-header h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.biochem-user-info {
+    text-align: center;
+}
+
+.biochem-user-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.biochem-user-info button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.biochem-user-info button:hover {
+    background-color: var(--hover-color);
+}
+
+.biochem-form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.biochem-form-group label {
+    width: 250px;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 16px;
+    text-align: right;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.biochem-form-group input[type="text"],
+.biochem-form-group input[type="number"],
+.biochem-form-group select {
+    width: 450px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    height: 40px;
+}
+
+.biochem-form-group input:focus,
+.biochem-form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.biochem-input-with-unit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.biochem-input-with-unit input {
+    width: 450px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    height: 40px;
+}
+
+.biochem-unit {
+    width: 40px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.biochem-submit-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.biochem-submit-button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width: 27%;
+}
+
+.biochem-submit-button:hover {
+    background-color: var(--hover-color);
+}
+
+.biochem-results {
+    margin-top: 20px;
+    background-color: var(--secondary-color);
+    padding: 14px;
+    border-radius: 12px;
+}
+
+.biochem-results table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 8px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.biochem-results th,
+.biochem-results td {
+    padding: 10px;
+    text-align: left;
+    background-color: #ffffff;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+.biochem-results th {
+    font-weight: bold;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 16px;
+}
+
+.biochem-results tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.biochem-results th:nth-child(1),
+.biochem-results td:nth-child(1) {
+    width: 140px;
+}
+
+.biochem-results th:nth-child(2),
+.biochem-results td:nth-child(2) {
+    width: 170px;
+}
+
+.biochem-results th:nth-child(3),
+.biochem-results td:nth-child(3) {
+    width: 150px;
+}
+
+.biochem-health-status {
+    background-color: #ababab;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: #666666;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 24px;
+    transition: background-color 0.3s ease;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.biochem-health-status:hover {
+    background-color: #8c8c8c;
+}
+
+.biochem-warning {
+    color: #e74c3c;
+    font-weight: 500;
+    margin-top: 16px;
+}
+
+.biochem-expanded-results {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding-top: 1px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.biochem-expanded-results h2 {
+    color: var(--primary-color);
+    font-weight: 300;
+    margin-bottom: 16px;
+}
